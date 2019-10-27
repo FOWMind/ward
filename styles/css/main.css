@@ -1,0 +1,129 @@
+/*Variables*/
+
+:root {
+	/*General colors*/
+	--bgColor: #EAE7AF;
+	--mainFont: 'Roboto', sans-serif;
+	--fontColor: #393939;
+	--linkColor: #3F25B4;
+	--linkColorHover: #5332EB;
+
+	/*Table colors*/
+	--friendlyWarnColor: #FFAAAA;
+	--warnColor: #E37070;
+	--muteColor: #c7004c;
+	--tempBanColor: #8F1537;
+	--permBan: #6E0925;
+	--naColor: #5A5A5A;
+}
+
+/*General*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+body {
+	background-color: var(--bgColor);
+	font-family: var(--mainFont);
+}
+
+b { font-weight: 500; }
+
+a { color: var(--linkColor); text-decoration: none; }
+a:hover { color: var(--linkColorHover); }
+
+/*Main Content*/
+
+.main-container { max-width: 1366px; }
+
+.main-container section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin: auto;
+}
+
+.main-container section div {
+	display: flex;
+	flex-direction: column;
+	max-width: 650px;
+	align-items: center;
+	padding: 20px 50px;
+}
+
+.main-container section div h2 {
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	color: var(--fontColor);
+	position: relative;
+	z-index: 1;
+}
+
+.main-container section div img {
+	width: 300px;
+	margin: 30px 0;
+}
+
+.main-container #rotate { transform: rotateZ(45deg); }
+
+.main-container section div ul { margin: 20px 0; }
+
+.main-container section div ul p {
+	font-weight: bold;
+	font-size: 20px;
+	color: var(--fontColor);
+}
+
+.main-container section div ul li {
+	margin: 10px 0;
+	background-color: #940A37;
+	color: #fff;
+	padding: 10px;
+	border-radius: 3px;
+	list-style: none;
+}
+
+/*Table Styles*/
+
+.main-container .howtodo {
+	max-width: 100%;
+	padding: 10px;
+}
+
+.howtodo table {
+	background-color: #2b2b28;
+	font-size: 13px;
+	text-align: center;
+	color: #fff;
+}
+
+.howtodo th { padding: 10px; }
+
+.howtodo tr { background-color: #940a37; }
+
+.howtodo td {
+	background-color: #940a37;
+	padding: 10px;
+}
+
+.howtodo .fw,
+.howtodo .na { color: #000; }
+
+.howtodo .fw { background-color: var(--friendlyWarnColor); }
+
+.howtodo .warn { background-color: var(--warnColor); }
+
+.howtodo .mute { background-color: var(--muteColor); }
+
+.howtodo .tempBan { background-color: var(--tempBanColor); }
+
+.howtodo .permBan { background-color: var(--permBan); }
+
+.howtodo .na { background-color: var(--naColor); }

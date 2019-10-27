@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+	<meta charset="UTF-8">
+	<title>Ward Guide</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles/css/main.css">
+</head>
+<body>
+	<div class="main-container">
+		<section>
+			<div>
+				<h2>Reglamento</h2>
+				<img src="styles/images/regulation.svg">
+				<ul>
+					<p>No se permite:</p>
+					<li>Insultar, provocar, publicar contenido para adultos, expresarse ofensivamente, tener un comportamiento indebido.</li>
+					<li>Mensajes con contenido vacío, repetitivo, realizando publicidad, spoilers de estrenos recientes (tampoco es válido con la opción de spoiler de Discord).</li>
+					<li>Nombres y fotos de perfil inapropiado que hagan referencia a: Contenido sexual explícito, violencia simbólica, ficticia o real, enfermedades o cualquier afección usado de manera despectiva, expresiones de odio, personajes o sucesos históricos, políticos y sociales que puedan herir susceptibilidades, palabras altisonantes, agresivas u ofensivas, la palabra "Riot" en <i>cualquier variante</i>, suplantar la indentidad de otros miembros de la comunidad, spoilers sobre estrenos de películas, etc.</li>
+					<p>Salas de voz:</p>
+					<li>Todos pueden hacer uso de ellas, estén jugando juntos o no.</li>
+					<li>Debes respetar a jugadores que estén en salas "Solo/Dúo" y "Premade".</li>
+					<li>Si entras a una sala de "Premade" para jugar, procura entrar a una que se ajuste a la cantidad de jugadores de tu equipo.</li>
+					<li>Entrar a un canal de voz queda bajo tu responsabilidad. Si alguna acción de otro usuario te molesta, puedes silenciar o bloquear a quien no desees escuchar; recuerda que puedes reportar situaciones muy severas como amenazas de muerte, intimidación, etc. a un moderador o centinela.</li>
+					<p>Bienestar general:</p>
+					<li>DISCORD LATAM se rige por las Reglas Universales de Bienestar General de nuestros foros. Cualquier transgresión a estas reglas puede conllevar una sanción. Por favor, revisa las reglas antes de comenzar a interactuar con la comunidad.</li>
+				</ul>
+
+				<div>
+					<h2>Comandos</h2>
+					<img src="styles/images/commands.svg">
+					<ul>
+						<li>~warn @usuario razón | Envía una advertencia al usuario y la registra en la base de datos.</li>
+						<li>~warns @usuario | Lista de advertencias de un usuario.</li>
+						<li>~clw @usuario | Elimina todas las advertencias de un usuario.</li>
+						<li>~dw ID | Elimina una advertencia por el ID de la sanción (ver el comando ~warns).</li>
+						<li>~mute @usuario minutos razón | Silencia a un usuario de los canales de voz y de texto. Por defecto la duración es de 10 minutos.</li>
+						<li>~unmute @usuario razón | Remueve el silencio a un usuario.</li>
+						<li>~kick @usuario razón | Expulsa a un usuario del servidor.</li>
+						<li>~ban @usuario razón -d minutos | Expulsa y bloquea a un usuario del servidor. Especificas la duración en días con el parámetro opcional -d</li>
+						<li>~banid ID razón -d minutos | Expulsa y bloquea a un usuario del servidor usando su ID de Discord. Especificas la duración en días con el parámetro opcional -d</li>
+						<li>~reason ID razón | Edita una razón por el ID de la sanción.</li>
+						<li>~cl 1-100 | Elimina la cantidad de mensajes especificados.</li>
+						<li>~cl 1-100 @usuario | Elimina los mensajes de un usuario.</li>
+						<li>~cl 1-100 -r piña | Elimina los mensajes usando una expresión regular, por ejemplo borrar todos lo que contengan la palabra piña.</li>
+						<li>~logs 1-100 | Registro de los últimos mensajes en el canal donde es usado. La cantidad es el número de resultados que se quiere consultar. Se necesita iniciar sesión en <a href="https://yagpdb.xyz/">https://yagpdb.xyz/</a> para leer el contenido.</li>
+						<li>~nn @usuario | Muestra los últimos 25 apodos de un usuario.</li>
+						<li>~whois @usuario | Muestra información del usuario (Apodos, usernames, fecha de ingreso, etc).</li>
+						<li>~remindme 0d0h0m mensaje | Crea un recordatorio para cualquier evento importante.</li>
+						<li>~reminders | Lista los recordatorios activos.</li>
+					</ul>
+				</div>
+			</div>
+			<div>
+				<h2>Mensajes predefinidos</h2>
+				<img id="rotate" src="styles/images/predefined_messages.svg">
+				<ul>
+					<p>Por exponer usuarios, cuando hay bardos.</p>
+					<li>No denuncies públicamente a otros usuarios dentro del servidor, este tipo de publicaciones pueden dañar el nombre de otros usuarios y se presta fácilmente para peleas.</li>
+					<li>Evita exponer a otros jugadores y recuerda darle un buen uso a los canales de texto. No respondas provocaciones ni provoques a otros jugadores.</li>
+					<p>Por comentarios sexuales e inapropiados</p>
+					<li>Evita realizar comentarios inapropiados y de índole sexual ("mensaje").</li>
+					<li>Evita realizar comentarios con connotación sexual ("mensaje").</li>
+					<p>Por drogas:</p>
+					<li>Evita realizar comentarios referentes a drogas o sustancias ilegales ("mensaje").</li>
+					<p>Por actitudes negativas o agresiones, depende el contexto:</p>
+					<li>Evita realizar comentarios provocativos y entrar en discusiones insultando a los demás usuarios. De continuar con esta actitud negativa, podrías recibir una sanción más severa.</li>
+					<li>Evita insultar a otros usuarios ("mensaje"), recuerda que debes mantener un ambiente de respeto.</li>
+					<p>Compra/Venta de cuentas:</p>
+					<li>Evita solicitar/ofrecer/vender/comprar cuentas. Está completamente prohibido compartir, intercambiar, regalar o vender cuentas. Se aplicarán sanciones más estrictas en caso de que continúes con el mismo comportamiento.</li>
+					<p>Aviso de haberle cambiado el nick</p>
+					<li>¡Hola! Tu nombre dentro del servidor ha sido cambiado debido a que es considerado inapropiado. No te preocupes, puedes volver a cambiarlo, pero asegúrate que esté dentro de los nombres permitidos por el reglamento.</li>
+					<p>Exponer jugadores. FW / warn:</p>
+					<li>Recuerda que está prohibido exponer a otros jugadores.
+					- Cualquier tipo de denuncia sobre algo que sucedió dentro del juego tiene que hacerse en Soporte al Jugador (o reportando al final de la partida). <br/>- Cualquier tipo de denuncia sobre algo que sucedió dentro del Discord la pueden hacer contactándose con cualquiera de los Moderadores/Centinelas.</li>
+					<p>Pedir que se cambie foto/nick con silenciado en su rol:</p>
+					<li>¡Hola!<br/>Silenciamos tu cuenta momentáneamente debido a que encontramos que el nombre/imagen que tienes en la comunidad es inapropiado, queremos pedir tu ayuda para cambiarlo a uno más adecuado, en cuanto se haga el cambio podemos quitar el silencio.<br/>Por favor evita cualquier referencia a:<br/>
+					• Pornografía o cualquier connotación sexual.<br/>
+					• Violencia explícita.<br/>
+					• Enfermedades o cualquier tipo de afección.<br/>
+					• Personajes históricos, políticos, sociales en controversia.<br/>
+					• Sucesos históricos que hieran la sensibilidad de otros.<br/>
+					• Groserías, palabras altisonantes, agresivas u ofensivas.<br/>
+					• Poseer Riot en cualquier variante (Rito, Rioter).<br/>
+					• Suplantar identidad de otros.<br/>
+					• Spoilers sobre estrenos de pelis, series, anime, etc.<br/>
+
+					Avísanos en cuanto hagas los cambios.<br/>
+
+					¡Gracias!</li>
+					<li>¡Hola! Silenciamos tu cuenta temporalmente porque hemos visto que el nombre/imagen que tienes en Comunidad LATAM es inapropiado según lo puesto en el <#388782338001207296>. Por favor haz un cambio y avísanos para que quitemos el silencio.</li>
+					<p>Por multimedia Off-topic en Charlas de LoL:</p>
+					<li>Por favor respeta los tópicos de los canales. Evita subir contenido multimedia que no este relacionado a League Of Legends en <#388784712304295966>.</li>
+					<p>(Mute siempre) Ofrecer o pedir Elo-Boost incluyendo precio.</p>
+					<li>~mute 1440 Has sido silenciado temporalmente del servidor (1 día) por solicitar u ofrecer Elo-Boost porque va en contra de las reglas y los términos de uso de Riot Games.</li>
+					<p>Dependiendo el contexto, se warnea por hablar de Elo-Boost.</p>
+					<li>Evita realizar mencionar de temas de Elo-Boost porque va en contra de las reglas y los términos de uso de Riot Games; de continuar así podrías recibir una sanción más severa.</li>
+					<p>Al terminar un registro manual</p>
+					<li>¡Listo! ¡Bienvenid@ a **Comunidad LATAM**! Te pido por favor que revises el <#388782338001207296> para convivir con el server. Gracias.</li>
+					<p>Si preguntan por que no pueden subir multimedia</p>
+					<li>La multimedia en <#388784943419097089> y <#398533231948988416> se desbloquean al nivel 3 (lobo), mientras que en <#388784712304295966> al nivel 9 (rocoso). Vas subiendo nivel según escribes, sólo te toma en cuenta 1 mensaje por minuto (para evitar el spam), puedes revisar en <#398559769339756544> poniendo !rank para ver el progreso y !roles para ver los roles disponibles por nivel.</li>
+				</ul>
+			</div>
+
+			<div class="howtodo">
+					<h2>Qué hacer en cada caso</h2>
+					<img src="styles/images/what_to_do.svg">
+					<table>
+						<thead>
+							<th>Regla</th>
+							<th>Tipo de infracción</th>
+							<th>Ejemplo:</th>
+							<th>Primera ofensa</th>
+							<th>Segunda ofensa</th>
+							<th>Cuarta ofensa en una semana</th>
+							<th>Quinta reincidencia en una semana</th>
+							<th>Reincidencia después del Ban temporal</th>
+							<th>EXCEPCIONES</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Reportar jugadores</td>
+								<td>Mensajes de denuncia donde se colocan nombres, apodos o capturas de pantalla.</td>
+								<td>"Imposible jugar ranked, denuncio a juan que trolleo toda la partida manco!"</td>
+								<td class="fw">Aviso amistoso</td>
+								<td class="warn">Warn</td>
+								<td class="mute">Mute</td>
+								<td class="tempBan">Ban temporal</td>
+								<td class="permBan">Ban permanente</td>
+								<td class="na">N/A</td>
+							</tr>
+							
+							<tr>
+								<td>Reportar jugadores</td>
+								<td>Mensajes reportando el comportamiento de alguien dentro del servidor en canales públicos</td>
+								<td>"@Moderador, por favor hagan algo @usuario me está molestando"</td>
+								<td class="fw">Aviso amistoso</td>
+								<td class="warn">Warn</td>
+								<td class="mute">Mute</td>
+								<td class="tempBan">Ban temporal</td>
+								<td class="permBan">Ban permanente</td>
+								<td class="na">N/A</td>
+							</tr>
+
+							<tr>
+								<td>Contenido ofensivo</td>
+								<td>Mala actitud, comportamiento hostil o de "bully", sin palabras altisonantes.</td>
+								<td>"Se nota que eres tonto"  "eres bien manco" "que comentario mas noob" "En tu casa te enseñaron a escribir?"</td>
+								<td class="fw">Aviso amistoso</td>
+								<td class="warn">Warn</td>
+								<td class="mute">Mute</td>
+								<td class="tempBan">Ban temporal</td>
+								<td class="permBan">Ban permanente</td>
+								<td class="na">N/A</td>
+							</tr>
+
+							<tr>
+								<td>Contenido ofensivo</td>
+								<td>Provocación a disputas negativas</td>
+								<td>"fulanita solo viene a molestar"<br/>"me esta molestando el floodero"<br/>"a ver si dejas de sacar cuero o hablar de mi a mis espaldas si ni me conoces"</td>
+								<td class="fw">Aviso amistoso</td>
+								<td class="warn">Warn</td>
+								<td class="mute">Mute</td>
+								<td class="tempBan">Ban temporal</td>
+								<td class="permBan">Ban permanente</td>
+								<td class="na">N/A</td>
+							</tr>
+
+							<tr>
+								<td>Contenido ofensivo</td>
+								<td>Mensajes con insultos  u ofensas  dirigidas a otros jugadores o miembros de moderación</td>
+								<td>"Juan puedes irte a la mierda" "GoldenGatoUrf eres un pendejo"</td>
+								<td class="warn">Warn</td>
+								<td class="warn">Warn</td>
+								<td class="mute">Mute</td>
+								<td class="tempBan">Ban temporal</td>
+								<td class="permBan">Ban permanente</td>
+								<td class="na">N/A</td>
+							</tr>
+
+							<tr>
+								<td>Contenido ofensivo</td>
+								<td>Mensajes promoviendo actitudes antideportivas severas</td>
+								<td>"Quien se une para trollear y flamear gente en normals, ya llevo 3 partidas asi"</td>
+								<td class="warn">Warn</td>
+								<td class="warn">Warn</td>
+								<td class="mute">Mute</td>
+								<td class="tempBan">Ban temporal</td>
+								<td class="permBan">Ban permanente</td>
+								<td class="na">N/A</td>
+							</tr>
+
+							<tr>
+								<td>Contenido ofensivo</td>
+								<td>Expresiones de odio <b>dirigidas</b> (Xenofobia, homofobia, amenazas de agresión física o cualquier acción discriminante)</td>
+								<td>"deberías suicidarte de lo mal que juegas"<br/>"de seguro tienes retraso mental"</td>
+								<td class="mute">Mute</td>
+								<td class="tempBan">Ban temporal</td>
+								<td class="permBan">Ban permanente</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+							</tr>
+
+							<tr>
+								<td>Contenido ofensivo</td>
+								<td>Expresiones de odio dirigidas y extremas (Xenofobia, homofobia, amenazas o cualquier acción discriminante)</td>
+								<td>"Mexicano de mierda, no deberias vivir, ojalá todo tu país se destruya con un temblor….."<br/>"venezolano de mierda"</td>
+								<td class="tempBan">Ban temporal</td>
+								<td class="permBan">Ban permanente</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+							</tr>
+
+							<tr>
+								<td>Contenido inapropiado</td>
+								<td>Contenido inapropiado (Referencias sexuales, consumo de drogas, packs, etc.)</td>
+								<td>"Me drogo para jugar mejor"<br/>"aquí hay packs?"</td>
+								<td class="fw">Aviso amistoso</td>
+								<td class="warn">Warn</td>
+								<td class="mute">Mute</td>
+								<td class="tempBan">Ban temporal</td>
+								<td class="permBan">Ban permanente</td>
+								<td class="na">N/A</td>
+							</tr>
+
+							<tr>
+								<td>Contenido inapropiado</td>
+								<td>Contenido inapropiado severo (Referencias sexuales explicitas o dirigidas)</td>
+								<td>"Quieres drogas?", "tengo el pack de Marce, quien lo quiere?" "Busco elfa que me gima mientras juego"</td>
+								<td class="warn">Warn</td>
+								<td class="mute">Mute</td>
+								<td class="tempBan">Ban temporal</td>
+								<td class="permBan">Ban permanente</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+							</tr>
+
+							<tr>
+								<td>Contenido inapropiado</td>
+								<td>Insultos con contenido sexual extremo</td>
+								<td>"Puedes chuparme la monda/pija/pene/poronga maldito feeder"</td>
+								<td class="mute">Mute</td>
+								<td class="tempBan">Ban temporal</td>
+								<td class="permBan">Ban permanente</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+							</tr>
+
+							<tr>
+								<td>Contenido inapropiado</td>
+								<td>Nombres o imágenes de perfil inapropiadas</td>
+								<td>Elver Galarga, Pamela Chu, Nicolás Maduro</td>
+								<td class="fw">Aviso amistoso por DM</td>
+								<td class="mute">Mute hasta que se haga el cambio</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+							</tr>
+
+							<tr>
+								<td>Contenido inapropiado</td>
+								<td>Nombres o imágenes de perfil extremadamente inapropiadas</td>
+								<td>VenezolanoConHambre, Hitlerteníarazón, ViolaLolis</td>
+								<td class="fw">Aviso amistoso</td>
+								<td class="mute">Mute hasta que se haga el cambio</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+							</tr>
+
+							<tr>
+								<td>Contenido inapropiado</td>
+								<td><b>Imágenes, videos o textos pornográficos.</b></td>
+								<td>XXX PORN *imagen* xvideos.com</td>
+								<td class="permBan">Ban permanente</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+							</tr>
+
+							<tr>
+								<td>Amenazas</td>
+								<td>Amenazas de suicido o autoflagelación</td>
+								<td>"Si no me regresan mi cuenta me suicido", "Mi amigo se está lastimando cada que pierde una partida"</td>
+								<td class="fw">Borrar mensaje</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+								<td>Escalar caso con Moderadores para ellos puedan enviarlo a los evaluadores de Player Harm</td>
+							</tr>
+
+							<tr>
+								<td>Amenazas</td>
+								<td>Amenazas de agresión física extrema o amenazas de muerte</td>
+								<td>"Tiraré una bomba en las oficinas de Riot en agosto"</td>
+								<td class="permBan">Ban permanente</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+								<td>Escalar caso con Moderadores para ellos puedan enviarlo a los evaluadores de Player Harm</td>
+							</tr>
+
+							<tr>
+								<td>Spamming</td>
+								<td>Uso excesivo de emotes</td>
+								<td>n/a</td>
+								<td class="fw">Aviso amistoso</td>
+								<td class="fw">Aviso amistoso</td>
+								<td class="warn">Warn</td>
+								<td class="mute">Mute</td>
+								<td class="tempBan">Ban temporal</td>
+								<td>* #No-mic<br/>* Poca actividad en canales<br/>* No interrumpen conversaciones</td>
+							</tr>
+
+							<tr>
+								<td>Spamming</td>
+								<td>Creaciones de la comunidad muy extensas.</td>
+								<td>"La muerte me enseño el juego; me permitió entender lo que todos esos Noxianos terribles y serios que pelean en el centenar de guerras aún tienen que aprender; solo puedes jugar al juego cuando sabes que es un juego.</td>
+								<td class="fw">Aviso amistoso</td>
+								<td class="fw">Aviso amistoso</td>
+								<td class="warn">Warn</td>
+								<td class="mute">Mute</td>
+								<td class="tempBan">Ban temporal</td>
+								<td>* #No-mic<br/>* Poca actividad en canales<br/>* No interrumpen conversaciones<br/>* Piden permiso para enviarlas</td>
+							</tr>
+
+							<tr>
+								<td>Spamming</td>
+								<td>Compartir de manera excesiva imágenes en canales multimedia o imágenes que no respetan el propósito de los canales</td>
+								<td>n/a</td>
+								<td class="fw">Aviso amistoso</td>
+								<td class="fw">Aviso amistoso</td>
+								<td class="warn">Warn</td>
+								<td class="mute">Mute</td>
+								<td class="tempBan">Ban temporal</td>
+								<td>* Poca actividad en canales<br/>* No interrumpen conversaciones</td>
+							</tr>
+
+							<tr>
+								<td>Spamming</td>
+								<td>Uso inapropiado de canales</td>
+								<td>Charlas-generales: RocketUrfToday at 8:52 PM<br/>Busco partida LAN, necesito carrito soy plata :c</td>
+								<td class="fw">Aviso amistoso</td>
+								<td class="fw">Aviso amistoso</td>
+								<td class="warn">Warn</td>
+								<td class="mute">Mute</td>
+								<td class="tempBan">Ban temporal</td>
+								<td>* Poca actividad en canales<br/>* No interrumpen conversaciones</td>
+							</tr>
+
+							<tr>
+								<td>Spamming</td>
+								<td>Versículos de la biblia o canciones</td>
+								<td>No vuelvas a mi aunque te quiero<br/>No vuelvas a mi aunque te extraño<br/>Te necesito aqui<br/>Pero tu amor ya no es para mi</td>
+								<td class="fw">Aviso amistoso</td>
+								<td class="warn">Warn</td>
+								<td class="mute">Mute</td>
+								<td class="tempBan">Ban temporal</td>
+								<td class="permBan">Ban temporal</td>
+								<td>* #No-mic<br/>* Poca actividad en canales<br/>* No interrumpen conversaciones</td>
+							</tr>
+
+							<tr>
+								<td>Spamming</td>
+								<td>Mensajes repetidos</td>
+								<td>RocketUrfToday at 9:05 PM<br/>HOLA<br/>DSF<br/>D<br/>GFD<br/>GFD<br/>HFG<br/>J<br/>SFDG</td>
+								<td class="fw">Aviso amistoso</td>
+								<td class="warn">Warn</td>
+								<td class="mute">Mute</td>
+								<td class="tempBan">Ban temporal</td>
+								<td class="permBan">Ban permanente</td>
+								<td>* #No-mic<br/>* Poca actividad en canales<br/>* No interrumpen conversaciones</td>
+							</tr>
+
+							<tr>
+								<td>Chat de Voz</td>
+								<td>Interrupción de las pláticas</td>
+								<td>Música, gritos o discusiones que afectan la comunicación de manera severa</td>
+								<td class="fw">Aviso amistoso</td>
+								<td class="warn">Warn</td>
+								<td class="mute">Mute</td>
+								<td class="tempBan">Ban temporal</td>
+								<td class="permBan">Ban permanente</td>
+								<td>Solo moderar cuando se hace de manera severa y repetitiva</td>
+							</tr>
+
+							<tr>
+								<td>Chat de Voz</td>
+								<td><b>Ofensas dirigidas</b></td>
+								<td>"Eres un pendejo" "Eres un inútil, no sabes jugar"</td>
+								<td class="warn">Warn</td>
+								<td class="mute">Mute</td>
+								<td class="tempBan">Ban temporal</td>
+								<td class="permBan">Ban permanente</td>
+								<td class="na">N/A</td>
+								<td>Solo hacer sanciones cuando son ofensas severas dirigidas, tomar en cuenta que el hablar con palabras altisonantes forma parte de la cultura gamer y cada jugador es responsable de su estancia en los canales de voz.</td>
+							</tr>
+
+							<tr>
+								<td>Chat de Voz</td>
+								<td>Ofensas o audios extremos</td>
+								<td>Insultos extremos, audios que lastimen demasiado los oídos</td>
+								<td class="mute">Mute</td>
+								<td class="tempBan">Ban temporal</td>
+								<td class="permBan">Ban permanente</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+								<td>Solo hacer sanciónes cuando son ofensas severas dirigidas, tomar en cuenta que el hablar con palabras altisonantes forma parte de la cultura gamer y cada jugador es responsable de su estancia en los canales de voz.</td>
+							</tr>
+
+							<tr>
+								<td>Promoción de servicios externos</td>
+								<td>Promociones externas que no es posible verificar</td>
+								<td>"Cybercafe con descuento en la condesa" "Rifo cajitas en mi stream"</td>
+								<td class="fw">Aviso amistoso</td>
+								<td class="warn">Warn</td>
+								<td class="mute">Mute</td>
+								<td class="tempBan">Ban temporal</td>
+								<td class="permBan">Ban permanente</td>
+								<td class="na">N/A</td>
+							</tr>
+
+							<tr>
+								<td>Promoción de servicios externos</td>
+								<td>Venta de RP por medio de terceros</td>
+								<td>"Vendo rp baratos" "alguien que me cargue RP?"</td>
+								<td class="warn">Warn</td>
+								<td class="mute">Mute</td>
+								<td class="tempBan">Ban temporal</td>
+								<td class="permBan">Ban permanente</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+							</tr>
+
+							<tr>
+								<td>Phising & scamming</td>
+								<td>Publicar información personal o de la cuenta del jugador que ponga en riesgo su seguridad.</td>
+								<td>"Les dejo mi numero y mi dirección por si alguien quiere venia a jugar conmigo"</td>
+								<td class="fw">Aviso amistoso</td>
+								<td class="fw">Aviso amistoso</td>
+								<td class="warn">Warn</td>
+								<td class="mute">Mute</td>
+								<td class="tempBan">Ban temporal</td>
+								<td class="na">N/A</td>
+							</tr>
+
+							<tr>
+								<td>Phising & scamming</td>
+								<td>Petición de información personal (edad, sexo, datos de cuentas, etc).</td>
+								<td>"Pásame tu celular", "Si me dices donde vives te mando un regalo"</td>
+								<td class="warn">Warn</td>
+								<td class="warn">Warn</td>
+								<td class="mute">Mute</td>
+								<td class="tempBan">Ban temporal</td>
+								<td class="permBan">Ban permanente</td>
+								<td class="na">N/A</td>
+							</tr>
+
+							<tr>
+								<td>Hacks</td>
+								<td>Preguntar si un programa es permitido</td>
+								<td>"alguien sabe si te banean por usar lolskin?"</td>
+								<td class="fw">Aviso amistoso</td>
+								<td class="fw">Aviso amistoso</td>
+								<td class="fw">Aviso amistoso</td>
+								<td class="fw">Aviso amistoso</td>
+								<td class="fw">Aviso amistoso</td>
+								<td class="na">N/A</td>
+							</tr>
+
+							<tr>
+								<td>Hacks</td>
+								<td>Solicitar información para programas no autorizados.</td>
+								<td>"alguien me puede decir como se usa este hack"</td>
+								<td class="warn">Warn</td>
+								<td class="mute">Mute</td>
+								<td class="tempBan">Ban temporal</td>
+								<td class="permBan">Ban permanente</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+							</tr>
+
+							<tr>
+								<td>Hacks</td>
+								<td>Anunciar programas o servicios no autorizados o con intención de hack (EloBoost, etc).</td>
+								<td>"Programa para obtener rp gratis funciona!!!" "Descubrí un hack para hacer perder a tu enemigo"</td>
+								<td class="mute">Mute</td>
+								<td class="permBan">Ban permanente</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+							</tr>
+
+							<tr>
+								<td>Actividad ilegal</td>
+								<td>Venta, compra, regalo o intercambio de cuentas</td>
+								<td>"Vendo cuenta nivel 30 con 25 campeones y 2 skins legendarias"</td>
+								<td class="mute">Mute</td>
+								<td class="permBan">Ban permanente</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+							</tr>
+
+							<tr>
+								<td>A discreción del moderador</td>
+								<td>Contenido controversial</td>
+								<td>Discusiones políticas, religiosas, problemas sociales, bélicas etc.</td>
+								<td class="fw">Aviso amistoso</td>
+								<td class="fw">Aviso amistoso</td>
+								<td class="warn">Warn</td>
+								<td class="mute">Mute</td>
+								<td class="tempBan">Ban temporal</td>
+								<td>Las discusiones sobre temas controversiales están totalmente prohibidas si no tienen relación con Riot.<br/>Es importante siempre preguntar como actuar en estos temas, ejercer con precaución y siempre de manera amistosa explicando que solo buscamos evitar un ambiente negativo y el servidor no es adecuado ni dirigido a esos temas.</td>
+							</tr>
+
+							<tr>
+								<td>A discreción del moderador</td>
+								<td>Evasión de sanciones</td>
+								<td>"jajaja no me banean putos de mierda" "Regresé por que mi sanción es injusta, quiero que me la quiten"</td>
+								<td class="mute">Mute</td>
+								<td class="tempBan">Ban temporal</td>
+								<td class="permBan">Ban permanente</td>
+								<td class="na">N/A</td>
+								<td class="na">N/A</td>
+								<td>La evasión significa que un jugador regresa con otra cuenta reclamando su sanción o con la misma actitud por la que fue castigado, en estos casos se procede directamente con la sanción hecha a la otra cuenta, es decir, aunque sea una cuenta nueva, no es necesario pasar por todos los criterios de reinicidecia, pues sabemos que es el mismo jugador que no está intentado reformarse.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+		</section>
+	</div>
+</body>
+</html>
