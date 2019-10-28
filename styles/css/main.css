@@ -11,10 +11,40 @@
 	/*Table colors*/
 	--friendlyWarnColor: #FFAAAA;
 	--warnColor: #E37070;
-	--muteColor: #c7004c;
+	--muteColor: #C7004C;
 	--tempBanColor: #8F1537;
 	--permBan: #6E0925;
 	--naColor: #5A5A5A;
+
+	/*Shortcuts Colors*/
+	--bgShortcuts: #34495E;
+	--shortcutsColor: #fff;
+	--shortcutsColorHover: #00A8FF;
+	--shortcutsBgColorHover: #333;
+
+	/*Dark Theme*/
+
+	--darkBody: #352F44;
+	--darkTitle: #fff;
+	--darkParagraph: #fff;
+	--darkLi: #411E8F;
+	--darkTable: #310A5D;
+
+	--darkFriendlyWarn: #9861D7;
+	--darkFriendlyWarnColor: #fff;
+	--darkWarn: #7A45B6;
+	--darkMute: #5D2997;
+	--darkTempBan: #512285;
+	--darkPermBan: #391166;
+	--darkNA: #000;
+
+	--darkSlide: #fff;
+	--darkSlideCircle: #54339E;
+
+	--darkBgShortcuts: #310A5D;
+	--darkShortcutsColor: #AFAFAF;
+	--darkShortcutsColorHover: #fff;
+	--darkShortcutsBgColorHover: #410881;
 }
 
 /*General*/
@@ -31,12 +61,42 @@
 body {
 	background-color: var(--bgColor);
 	font-family: var(--mainFont);
+	overflow-x: hidden;
 }
 
 b { font-weight: 500; }
 
 a { color: var(--linkColor); text-decoration: none; }
 a:hover { color: var(--linkColorHover); }
+
+/*Theme slide*/
+
+.slide {
+	width: 60px;
+	height: 25px;
+	background-color: #333333;
+	position: fixed;
+	top: 50px;
+	right: 20px;
+	border-radius: 30px;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.slide .slide-circle {
+	width: 25px;
+	height: 25px;
+	background-color: #3D5874;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 30px;
+	transition: left .3s;
+}
+
+.slide .slide-circle.push {
+	left: 36px;
+}
 
 /*Main Content*/
 
@@ -104,7 +164,7 @@ a:hover { color: var(--linkColorHover); }
 	color: #fff;
 }
 
-.howtodo th { padding: 10px; }
+.howtodo th { padding: 10px; transform: scale(1.15); }
 
 .howtodo tr { background-color: #940a37; }
 
@@ -127,3 +187,110 @@ a:hover { color: var(--linkColorHover); }
 .howtodo .permBan { background-color: var(--permBan); }
 
 .howtodo .na { background-color: var(--naColor); }
+
+/*Atajos*/
+
+a#comandos,
+a#comandos2,
+a#queHacer,
+a#queHacer2,
+a#reglamento,
+a#reglamento2,
+a#mensajesPredefinidos,
+a#mensajesPredefinidos2 {
+	color: var(--shortcutsColor);
+	background-color: var(--bgShortcuts);
+	padding: 10px;
+	display: block;
+	margin: 5px 0;
+	transition: background .5s, color .2s, padding .5s;
+	position: absolute;
+	left: 0;
+	min-width: 100px;
+}
+
+a#comandos { top: 100px; }
+
+a#queHacer { top: 150px; }
+
+a#reglamento { top: 1380px; }
+
+a#mensajesPredefinidos { top: 1430px; }
+
+a#queHacer2 { top: 1480px; }
+
+a#reglamento2 { top: 3462px; }
+
+a#mensajesPredefinidos2 { top: 3512px; }
+
+a#comandos2 { top: 3562px; }
+
+
+a#comandos:hover,
+a#comandos2:hover,
+a#queHacer:hover,
+a#queHacer2:hover,
+a#reglamento:hover,
+a#reglamento2:hover,
+a#mensajesPredefinidos:hover,
+a#mensajesPredefinidos2:hover {
+	background-color: var(--shortcutsBgColorHover);
+	color: var(--shortcutsColorHover);
+	transition-duration: .2s;
+	padding-right: 25px;
+}
+
+/*Dark Theme*/
+
+.darkBody { background: var(--darkBody); }
+
+.main-container .darkTitle { color: var(--darkTitle); }
+
+.main-container .darkParagraph { color: var(--darkParagraph); }
+
+.main-container .darkLi { background-color: var(--darkLi); }
+
+.howtodo .darkTable { background-color: var(--darkTable); }
+
+.howtodo .darkFriendlyWarn {
+	color: var(--darkFriendlyWarnColor);
+	background-color: var(--darkFriendlyWarn);
+}
+
+.howtodo .darkWarn { background-color: var(--darkWarn); }
+
+.howtodo .darkMute { background-color: var(--darkMute); }
+
+.howtodo .darkTempBan { background-color: var(--darkTempBan); }
+
+.howtodo .darkPermBan { background-color: var(--darkPermBan); }
+
+.howtodo .darkNA { color: var(--darkNA); }
+
+.darkSlide { background-color: var(--darkSlide); }
+
+.slide .darkSlideCircle { background-color: var(--darkSlideCircle); }
+
+.shortcuts .darkRegulation,
+.shortcuts .darkRegulation2,
+.shortcuts .darkPredefinedMessages,
+.shortcuts .darkPredefinedMessages2,
+.shortcuts .darkCommands,
+.shortcuts .darkCommands2,
+.shortcuts .darkHowToDo,
+.shortcuts .darkHowToDo2 {
+	background-color: var(--darkBgShortcuts) !important;
+	color: var(--darkShortcutsColor) !important;
+}
+
+.shortcuts .darkRegulation:hover,
+.shortcuts .darkRegulation2:hover,
+.shortcuts .darkPredefinedMessages:hover,
+.shortcuts .darkPredefinedMessages2:hover,
+.shortcuts .darkCommands:hover,
+.shortcuts .darkCommands2:hover,
+.shortcuts .darkHowToDo:hover,
+.shortcuts .darkHowToDo2:hover {
+	background-color: var(--darkShortcutsBgColorHover) !important;
+	color: var(--darkShortcutsColorHover) !important;
+}

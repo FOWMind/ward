@@ -5,11 +5,27 @@
 	<title>Ward Guide</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="styles/css/main.css">
+	<script src="js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
+	<div class="slide">
+		<div class="slide-circle"></div>
+	</div>
+	<!--<div class="shortcuts">
+		<a class="comandos" id="comandos" href="#commands">Comandos</a>
+		<a class="queHacer" id="queHacer" href="#howtodo">Qué hacer</a>
+
+		<a class="reglamento" id="reglamento" href="#regulation">Reglamento</a>
+		<a class="mensajesPredefinidos" id="mensajesPredefinidos" href="#predefined_messages">Mensajes predefinidos</a>
+		<a class="queHacer2" id="queHacer2" href="#howtodo">Qué hacer</a>
+	
+		<a class="reglamento2" id="reglamento2" href="#regulation">Reglamento</a>
+		<a class="mensajesPredefinidos2" id="mensajesPredefinidos2" href="#predefined_messages">Mensajes predefinidos</a>
+		<a class="comandos2" id="comandos2" href="#commands">Comandos</a>
+	</div>-->
 	<div class="main-container">
 		<section>
-			<div>
+			<div id="regulation">
 				<h2>Reglamento</h2>
 				<img src="styles/images/regulation.svg">
 				<ul>
@@ -26,32 +42,40 @@
 					<li>DISCORD LATAM se rige por las Reglas Universales de Bienestar General de nuestros foros. Cualquier transgresión a estas reglas puede conllevar una sanción. Por favor, revisa las reglas antes de comenzar a interactuar con la comunidad.</li>
 				</ul>
 
-				<div>
+				<div id="commands">
 					<h2>Comandos</h2>
 					<img src="styles/images/commands.svg">
 					<ul>
+						<p>Advertencias</p>
 						<li>~warn @usuario razón | Envía una advertencia al usuario y la registra en la base de datos.</li>
 						<li>~warns @usuario | Lista de advertencias de un usuario.</li>
 						<li>~clw @usuario | Elimina todas las advertencias de un usuario.</li>
 						<li>~dw ID | Elimina una advertencia por el ID de la sanción (ver el comando ~warns).</li>
+						<p>Silencios</p>
 						<li>~mute @usuario minutos razón | Silencia a un usuario de los canales de voz y de texto. Por defecto la duración es de 10 minutos.</li>
 						<li>~unmute @usuario razón | Remueve el silencio a un usuario.</li>
+						<p>Expulsiones (sólo para moderadores)</p>
 						<li>~kick @usuario razón | Expulsa a un usuario del servidor.</li>
 						<li>~ban @usuario razón -d minutos | Expulsa y bloquea a un usuario del servidor. Especificas la duración en días con el parámetro opcional -d</li>
 						<li>~banid ID razón -d minutos | Expulsa y bloquea a un usuario del servidor usando su ID de Discord. Especificas la duración en días con el parámetro opcional -d</li>
+						<p>General</p>
 						<li>~reason ID razón | Edita una razón por el ID de la sanción.</li>
-						<li>~cl 1-100 | Elimina la cantidad de mensajes especificados.</li>
-						<li>~cl 1-100 @usuario | Elimina los mensajes de un usuario.</li>
-						<li>~cl 1-100 -r piña | Elimina los mensajes usando una expresión regular, por ejemplo borrar todos lo que contengan la palabra piña.</li>
+						<p>Borrar y ver mensajes</p>
+						<li>~cl 1-100 | Elimina la cantidad de mensajes especificados (se recomienda un máximo de 20 por vez).</li>
+						<li>~cl 1-100 @usuario | Elimina los mensajes de un usuario (se recomienda un máximo de 20 por vez).</li>
+						<li>~cl 1-100 -r piña | Elimina los mensajes usando una expresión regular, por ejemplo borrar todos lo que contengan la palabra piña (se recomienda un máximo de 20 por vez).</li>
 						<li>~logs 1-100 | Registro de los últimos mensajes en el canal donde es usado. La cantidad es el número de resultados que se quiere consultar. Se necesita iniciar sesión en <a href="https://yagpdb.xyz/">https://yagpdb.xyz/</a> para leer el contenido.</li>
+						<p>Información de un usuario</p>
 						<li>~nn @usuario | Muestra los últimos 25 apodos de un usuario.</li>
 						<li>~whois @usuario | Muestra información del usuario (Apodos, usernames, fecha de ingreso, etc).</li>
+						<li>/whois ID | Muestra información de la cuenta de un usuario (Nombre de invocador, nivel, etc).</li>
+						<p>Recuerdos</p>
 						<li>~remindme 0d0h0m mensaje | Crea un recordatorio para cualquier evento importante.</li>
 						<li>~reminders | Lista los recordatorios activos.</li>
 					</ul>
 				</div>
 			</div>
-			<div>
+			<div id="predefined_messages">
 				<h2>Mensajes predefinidos</h2>
 				<img id="rotate" src="styles/images/predefined_messages.svg">
 				<ul>
@@ -71,8 +95,7 @@
 					<p>Aviso de haberle cambiado el nick</p>
 					<li>¡Hola! Tu nombre dentro del servidor ha sido cambiado debido a que es considerado inapropiado. No te preocupes, puedes volver a cambiarlo, pero asegúrate que esté dentro de los nombres permitidos por el reglamento.</li>
 					<p>Exponer jugadores. FW / warn:</p>
-					<li>Recuerda que está prohibido exponer a otros jugadores.
-					- Cualquier tipo de denuncia sobre algo que sucedió dentro del juego tiene que hacerse en Soporte al Jugador (o reportando al final de la partida). <br/>- Cualquier tipo de denuncia sobre algo que sucedió dentro del Discord la pueden hacer contactándose con cualquiera de los Moderadores/Centinelas.</li>
+					<li>Recuerda que está prohibido exponer a otros jugadores, si tienes algún reporte por favor hazlo al finalizar una partida.</li>
 					<p>Pedir que se cambie foto/nick con silenciado en su rol:</p>
 					<li>¡Hola!<br/>Silenciamos tu cuenta momentáneamente debido a que encontramos que el nombre/imagen que tienes en la comunidad es inapropiado, queremos pedir tu ayuda para cambiarlo a uno más adecuado, en cuanto se haga el cambio podemos quitar el silencio.<br/>Por favor evita cualquier referencia a:<br/>
 					• Pornografía o cualquier connotación sexual.<br/>
@@ -88,21 +111,21 @@
 					Avísanos en cuanto hagas los cambios.<br/>
 
 					¡Gracias!</li>
-					<li>¡Hola! Silenciamos tu cuenta temporalmente porque hemos visto que el nombre/imagen que tienes en Comunidad LATAM es inapropiado según lo puesto en el <#388782338001207296>. Por favor haz un cambio y avísanos para que quitemos el silencio.</li>
+					<li>¡Hola! Silenciamos tu cuenta temporalmente porque hemos visto que el nombre/imagen que tienes en Comunidad Riot Games LATAM es inapropiado según lo puesto en el <#388782338001207296>. Por favor haz un cambio y avísanos para que quitemos el silencio.</li>
 					<p>Por multimedia Off-topic en Charlas de LoL:</p>
-					<li>Por favor respeta los tópicos de los canales. Evita subir contenido multimedia que no este relacionado a League Of Legends en <#388784712304295966>.</li>
+					<li>Por favor respeta los tópicos de los canales. Evita subir contenido multimedia que no este relacionado a League of Legends en <#388784712304295966>.</li>
 					<p>(Mute siempre) Ofrecer o pedir Elo-Boost incluyendo precio.</p>
 					<li>~mute 1440 Has sido silenciado temporalmente del servidor (1 día) por solicitar u ofrecer Elo-Boost porque va en contra de las reglas y los términos de uso de Riot Games.</li>
 					<p>Dependiendo el contexto, se warnea por hablar de Elo-Boost.</p>
-					<li>Evita realizar mencionar de temas de Elo-Boost porque va en contra de las reglas y los términos de uso de Riot Games; de continuar así podrías recibir una sanción más severa.</li>
+					<li>Evita realizar menciones sobre temas de Elo-Boost ya que va en contra de las reglas y los términos de uso de Riot Games; de continuar así podrías recibir una sanción más severa.</li>
 					<p>Al terminar un registro manual</p>
-					<li>¡Listo! ¡Bienvenid@ a **Comunidad LATAM**! Te pido por favor que revises el <#388782338001207296> para convivir con el server. Gracias.</li>
+					<li>¡Listo! ¡Bienvenid@ a **Comunidad Riot Games LATAM**! Te pido por favor que revises el <#388782338001207296> para aprender a convivir con las personas del servidor. Gracias.</li>
 					<p>Si preguntan por que no pueden subir multimedia</p>
 					<li>La multimedia en <#388784943419097089> y <#398533231948988416> se desbloquean al nivel 3 (lobo), mientras que en <#388784712304295966> al nivel 9 (rocoso). Vas subiendo nivel según escribes, sólo te toma en cuenta 1 mensaje por minuto (para evitar el spam), puedes revisar en <#398559769339756544> poniendo !rank para ver el progreso y !roles para ver los roles disponibles por nivel.</li>
 				</ul>
 			</div>
 
-			<div class="howtodo">
+			<div class="howtodo" id="howtodo">
 					<h2>Qué hacer en cada caso</h2>
 					<img src="styles/images/what_to_do.svg">
 					<table>
@@ -120,7 +143,7 @@
 						<tbody>
 							<tr>
 								<td>Reportar jugadores</td>
-								<td>Mensajes de denuncia donde se colocan nombres, apodos o capturas de pantalla.</td>
+								<td>Mensajes de denuncia donde se colocan nombres, apodos o capturas de pantalla</td>
 								<td>"Imposible jugar ranked, denuncio a juan que trolleo toda la partida manco!"</td>
 								<td class="fw">Aviso amistoso</td>
 								<td class="warn">Warn</td>
@@ -144,8 +167,8 @@
 
 							<tr>
 								<td>Contenido ofensivo</td>
-								<td>Mala actitud, comportamiento hostil o de "bully", sin palabras altisonantes.</td>
-								<td>"Se nota que eres tonto"  "eres bien manco" "que comentario mas noob" "En tu casa te enseñaron a escribir?"</td>
+								<td>Mala actitud, comportamiento hostil o de "bully", sin palabras altisonantes</td>
+								<td>"Se nota que eres tonto" "eres bien manco" "que comentario mas noob" "En tu casa te enseñaron a escribir?"</td>
 								<td class="fw">Aviso amistoso</td>
 								<td class="warn">Warn</td>
 								<td class="mute">Mute</td>
@@ -192,7 +215,7 @@
 
 							<tr>
 								<td>Contenido ofensivo</td>
-								<td>Expresiones de odio <b>dirigidas</b> (Xenofobia, homofobia, amenazas de agresión física o cualquier acción discriminante)</td>
+								<td>Expresiones de odio <b>dirigidas</b> (xenofobia, homofobia, amenazas de agresión física o cualquier acción discriminante)</td>
 								<td>"deberías suicidarte de lo mal que juegas"<br/>"de seguro tienes retraso mental"</td>
 								<td class="mute">Mute</td>
 								<td class="tempBan">Ban temporal</td>
@@ -205,7 +228,7 @@
 							<tr>
 								<td>Contenido ofensivo</td>
 								<td>Expresiones de odio dirigidas y extremas (Xenofobia, homofobia, amenazas o cualquier acción discriminante)</td>
-								<td>"Mexicano de mierda, no deberias vivir, ojalá todo tu país se destruya con un temblor….."<br/>"venezolano de mierda"</td>
+								<td>"Mexicano de mierda, no deberias vivir, ojalá todo tu país se destruya con un temblor.."<br/>"venezolano de mierda"</td>
 								<td class="tempBan">Ban temporal</td>
 								<td class="permBan">Ban permanente</td>
 								<td class="na">N/A</td>
@@ -216,7 +239,7 @@
 
 							<tr>
 								<td>Contenido inapropiado</td>
-								<td>Contenido inapropiado (Referencias sexuales, consumo de drogas, packs, etc.)</td>
+								<td>Contenido inapropiado (referencias sexuales, consumo de drogas, packs, etc.)</td>
 								<td>"Me drogo para jugar mejor"<br/>"aquí hay packs?"</td>
 								<td class="fw">Aviso amistoso</td>
 								<td class="warn">Warn</td>
@@ -228,7 +251,7 @@
 
 							<tr>
 								<td>Contenido inapropiado</td>
-								<td>Contenido inapropiado severo (Referencias sexuales explicitas o dirigidas)</td>
+								<td>Contenido inapropiado severo (referencias sexuales explícitas o dirigidas)</td>
 								<td>"Quieres drogas?", "tengo el pack de Marce, quien lo quiere?" "Busco elfa que me gima mientras juego"</td>
 								<td class="warn">Warn</td>
 								<td class="mute">Mute</td>
@@ -324,7 +347,7 @@
 
 							<tr>
 								<td>Spamming</td>
-								<td>Creaciones de la comunidad muy extensas.</td>
+								<td>Creaciones de la comunidad muy extensas</td>
 								<td>"La muerte me enseño el juego; me permitió entender lo que todos esos Noxianos terribles y serios que pelean en el centenar de guerras aún tienen que aprender; solo puedes jugar al juego cuando sabes que es un juego.</td>
 								<td class="fw">Aviso amistoso</td>
 								<td class="fw">Aviso amistoso</td>
@@ -349,7 +372,7 @@
 							<tr>
 								<td>Spamming</td>
 								<td>Uso inapropiado de canales</td>
-								<td>Charlas-generales: RocketUrfToday at 8:52 PM<br/>Busco partida LAN, necesito carrito soy plata :c</td>
+								<td>#charlas-generales: RocketUrfToday at 8:52 PM<br/>Busco partida LAN, necesito carrito soy plata :c</td>
 								<td class="fw">Aviso amistoso</td>
 								<td class="fw">Aviso amistoso</td>
 								<td class="warn">Warn</td>
@@ -444,8 +467,8 @@
 
 							<tr>
 								<td>Phising & scamming</td>
-								<td>Publicar información personal o de la cuenta del jugador que ponga en riesgo su seguridad.</td>
-								<td>"Les dejo mi numero y mi dirección por si alguien quiere venia a jugar conmigo"</td>
+								<td>Publicar información personal o de la cuenta del jugador que ponga en riesgo su seguridad</td>
+								<td>"Les dejo mi numero y mi dirección por si alguien quiere venir a jugar conmigo"</td>
 								<td class="fw">Aviso amistoso</td>
 								<td class="fw">Aviso amistoso</td>
 								<td class="warn">Warn</td>
@@ -456,7 +479,7 @@
 
 							<tr>
 								<td>Phising & scamming</td>
-								<td>Petición de información personal (edad, sexo, datos de cuentas, etc).</td>
+								<td>Petición de información personal (edad, sexo, datos de cuentas, etc)</td>
 								<td>"Pásame tu celular", "Si me dices donde vives te mando un regalo"</td>
 								<td class="warn">Warn</td>
 								<td class="warn">Warn</td>
@@ -480,7 +503,7 @@
 
 							<tr>
 								<td>Hacks</td>
-								<td>Solicitar información para programas no autorizados.</td>
+								<td>Solicitar información para programas no autorizados</td>
 								<td>"alguien me puede decir como se usa este hack"</td>
 								<td class="warn">Warn</td>
 								<td class="mute">Mute</td>
@@ -492,7 +515,7 @@
 
 							<tr>
 								<td>Hacks</td>
-								<td>Anunciar programas o servicios no autorizados o con intención de hack (EloBoost, etc).</td>
+								<td>Anunciar programas o servicios no autorizados o con intención de hack (EloBoost, etc)</td>
 								<td>"Programa para obtener rp gratis funciona!!!" "Descubrí un hack para hacer perder a tu enemigo"</td>
 								<td class="mute">Mute</td>
 								<td class="permBan">Ban permanente</td>
@@ -542,5 +565,36 @@
 				</div>
 		</section>
 	</div>
+	<script>
+		$(document).ready(function(){
+			$('.slide').click(function(){
+				$('.slide-circle').toggleClass('push');
+				$('body').toggleClass('darkBody');
+				$('h2').toggleClass('darkTitle');
+				$('p').toggleClass('darkParagraph');
+				$('.main-container section div ul li').toggleClass('darkLi');
+				$('.howtodo table td').toggleClass('darkTable');
+				$('.howtodo table tr').toggleClass('darkTable');
+
+				$('.howtodo table .fw').toggleClass('darkFriendlyWarn');
+				$('.howtodo table .warn').toggleClass('darkWarn');
+				$('.howtodo table .mute').toggleClass('darkMute');
+				$('.howtodo table .tempBan').toggleClass('darkTempBan');
+				$('.howtodo table .permBan').toggleClass('darkPermBan');
+				$('.howtodo table .na').toggleClass('darkNA');
+				$('.slide').toggleClass('darkSlide');
+				$('.slide-circle').toggleClass('darkSlideCircle');
+
+				/*$('.reglamento').toggleClass('darkRegulation');
+				$('.reglamento2').toggleClass('darkRegulation2');
+				$('.mensajesPredefinidos').toggleClass('darkPredefinedMessages');
+				$('.mensajesPredefinidos2').toggleClass('darkPredefinedMessages2');
+				$('.comandos').toggleClass('darkCommands');
+				$('.comandos2').toggleClass('darkCommands2');
+				$('.queHacer').toggleClass('darkHowToDo');
+				$('.queHacer2').toggleClass('darkHowToDo2');*/
+			});
+		});
+	</script>
 </body>
 </html>
