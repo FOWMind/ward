@@ -9,6 +9,7 @@
 	--linkColorHover: #FFD3D3;
 
 	/*Table colors*/
+	--tableBg: #2b2b28;
 	--friendlyWarnColor: #FFAAAA;
 	--warnColor: #E37070;
 	--muteColor: #C7004C;
@@ -17,10 +18,10 @@
 	--naColor: #5A5A5A;
 
 	/*Shortcuts Colors*/
-	--bgShortcuts: #34495E;
+	--bgShortcuts: #24384D;
 	--shortcutsColor: #fff;
 	--shortcutsColorHover: #00A8FF;
-	--shortcutsBgColorHover: #333;
+	--shortcutsBgColorHover: #12202E;
 
 	/*Dark Theme*/
 
@@ -28,7 +29,8 @@
 	--darkTitle: #fff;
 	--darkParagraph: #fff;
 	--darkLi: #411E8F;
-	--darkTable: #310A5D;
+	--darkTable: #C5C5C5;
+	--darkTdr: #310A5D;
 
 	--darkFriendlyWarn: #9861D7;
 	--darkFriendlyWarnColor: #fff;
@@ -47,6 +49,13 @@
 	--darkShortcutsBgColorHover: #410881;
 }
 
+/*Scroll*/
+
+::webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
 /*General*/
 
 * {
@@ -61,7 +70,6 @@
 body {
 	background-color: var(--bgColor);
 	font-family: var(--mainFont);
-	overflow-x: hidden;
 }
 
 b { font-weight: 500; }
@@ -83,15 +91,26 @@ a:hover { color: var(--linkColorHover); }
 	z-index: 2;
 }
 
+.slide::before {
+	position: absolute;
+	top: 4px;
+	font-size: 14px;
+	content: 'Dark';
+	color: #fff;
+	right: 5px;
+	transition: left .2s, right .2s;
+}
+
 .slide .slide-circle {
 	width: 25px;
-	height: 25px;
+	height: 25.4px;
 	background-color: #3D5874;
 	position: absolute;
 	top: 0;
 	left: 0;
 	border-radius: 30px;
 	transition: left .3s;
+	z-index: 1;
 }
 
 .slide .slide-circle.push {
@@ -126,12 +145,15 @@ a:hover { color: var(--linkColorHover); }
 	z-index: 1;
 }
 
-.main-container section div img {
+.main-container section div img,
+.main-container section div svg {
 	width: 300px;
 	margin: 30px 0;
 }
 
 .main-container #rotate { transform: rotateZ(45deg); }
+
+/*.howtodo .darkSvg { fill: #581B00; }*/
 
 .main-container section div ul { margin: 20px 0; }
 
@@ -154,11 +176,10 @@ a:hover { color: var(--linkColorHover); }
 
 .main-container .howtodo {
 	max-width: 100%;
-	padding: 10px;
 }
 
 .howtodo table {
-	background-color: #2b2b28;
+	background-color: var(--tableBg);
 	font-size: 13px;
 	text-align: center;
 	color: #fff;
@@ -192,10 +213,13 @@ a:hover { color: var(--linkColorHover); }
 
 a#comandos,
 a#comandos2,
+a#comandos3,
 a#queHacer,
 a#queHacer2,
+a#queHacer3,
 a#reglamento,
 a#reglamento2,
+a#reglamento3,
 a#mensajesPredefinidos,
 a#mensajesPredefinidos2 {
 	color: var(--shortcutsColor);
@@ -206,32 +230,48 @@ a#mensajesPredefinidos2 {
 	transition: background .5s, color .2s, padding .5s;
 	position: absolute;
 	left: 0;
-	min-width: 100px;
+}
+
+.shortcuts img {
+	width: 30px;
 }
 
 a#comandos { top: 100px; }
 
-a#queHacer { top: 150px; }
+a#queHacer { top: 160px; }
+
 
 a#reglamento { top: 1380px; }
 
-a#mensajesPredefinidos { top: 1430px; }
+a#mensajesPredefinidos { top: 1440px; }
+a#mensajesPredefinidos img { transform: rotateZ(45deg); }
 
-a#queHacer2 { top: 1480px; }
+a#queHacer2 { top: 1500px; }
+
 
 a#reglamento2 { top: 3462px; }
 
-a#mensajesPredefinidos2 { top: 3512px; }
+a#mensajesPredefinidos2 { top: 3522px; }
+a#mensajesPredefinidos2 img { transform: rotateZ(45deg); }
 
-a#comandos2 { top: 3562px; }
+a#comandos2 { top: 3582px; }
 
+
+a#reglamento3 { display: none; }
+
+a#comandos3 { display: none; }
+
+a#queHacer3 { display: none; }
 
 a#comandos:hover,
 a#comandos2:hover,
+a#comandos3:hover,
 a#queHacer:hover,
 a#queHacer2:hover,
+a#queHacer3:hover,
 a#reglamento:hover,
 a#reglamento2:hover,
+a#reglamento3:hover,
 a#mensajesPredefinidos:hover,
 a#mensajesPredefinidos2:hover {
 	background-color: var(--shortcutsBgColorHover);
@@ -252,6 +292,8 @@ a#mensajesPredefinidos2:hover {
 
 .howtodo .darkTable { background-color: var(--darkTable); }
 
+.howtodo .darkTdr { background-color: var(--darkTdr); }
+
 .howtodo .darkFriendlyWarn {
 	color: var(--darkFriendlyWarnColor);
 	background-color: var(--darkFriendlyWarn);
@@ -265,9 +307,19 @@ a#mensajesPredefinidos2:hover {
 
 .howtodo .darkPermBan { background-color: var(--darkPermBan); }
 
-.howtodo .darkNA { color: var(--darkNA); }
+.howtodo .darkNA {
+	color: var(--darkNA);
+	background-color: #240448;
+}
 
 .darkSlide { background-color: var(--darkSlide); }
+
+.darkSlide::before {
+	content: 'Light';
+	color: #141414;
+	right: 25px;
+	font-weight: 500;
+}
 
 .slide .darkSlideCircle { background-color: var(--darkSlideCircle); }
 
@@ -293,4 +345,240 @@ a#mensajesPredefinidos2:hover {
 .shortcuts .darkHowToDo2:hover {
 	background-color: var(--darkShortcutsBgColorHover) !important;
 	color: var(--darkShortcutsColorHover) !important;
+}
+
+@media (max-width: 1316px) {
+	.main-container section div ul {
+		max-width: 450px;
+	}
+
+	.main-container section div img {
+		width: 250px;
+	}
+}
+
+@media (max-width: 1216px) {
+	.main-container section div {
+		max-width: 950px;
+	}
+
+	.main-container section div ul {
+		max-width: inherit;
+	}
+
+	a#reglamento { top: 1180px; }
+
+	a#mensajesPredefinidos { top: 1240px; }
+
+	a#queHacer2 { top: 1300px; }
+
+
+	a#reglamento2 { top: 5200px; }
+
+	a#mensajesPredefinidos2 { top: 5260px; }
+
+	a#comandos2 { top: 5320px; }
+
+
+	a#reglamento3 { top: 2900px; display: inherit; }
+
+	a#comandos3 { top: 2960px; display: inherit; }
+
+	a#queHacer3 { top: 3020px; display: inherit; }
+}
+
+@media (max-width: 925px) {
+	a#reglamento { top: 1230px; }
+
+	a#mensajesPredefinidos { top: 1290px; }
+
+	a#queHacer2 { top: 1350px; }
+
+
+	a#reglamento3 { top: 3100px; }
+
+	a#comandos3 { top: 3160px; }
+
+	a#queHacer3 { top: 3220px; }
+
+
+	a#reglamento2 { top: 5300px; }
+
+	a#mensajesPredefinidos2 { top: 5360px; }
+
+	a#comandos2 { top: 5420px; }
+}
+
+@media (max-width: 880px) {
+	a#reglamento2 { top: 5400px; }
+
+	a#mensajesPredefinidos2 { top: 5460px; }
+
+	a#comandos2 { top: 5520px; }
+}
+
+@media (max-width: 820px) {
+	a#reglamento2 { top: 5500px; }
+
+	a#mensajesPredefinidos2 { top: 5560px; }
+
+	a#comandos2 { top: 5620px; }
+}
+
+@media (max-width: 777px) {
+	a#reglamento2 { top: 5600px; }
+
+	a#mensajesPredefinidos2 { top: 5660px; }
+
+	a#comandos2 { top: 5720px; }
+}
+
+@media (max-width: 750px) {
+	a#reglamento { top: 1330px; }
+
+	a#mensajesPredefinidos { top: 1390px; }
+
+	a#queHacer2 { top: 1450px; }
+
+
+	a#reglamento3 { top: 3200px; }
+
+	a#comandos3 { top: 3260px; }
+
+	a#queHacer3 { top: 3320px; }
+}
+
+@media (max-width: 735px) {
+	a#reglamento2 { top: 5700px; }
+
+	a#mensajesPredefinidos2 { top: 5760px; }
+
+	a#comandos2 { top: 5820px; }
+}
+
+@media (max-width: 700px) {
+	a#reglamento2 { top: 5800px; }
+
+	a#mensajesPredefinidos2 { top: 5860px; }
+
+	a#comandos2 { top: 5920px; }
+}
+
+@media (max-width: 675px) {
+	a#reglamento3 { top: 3300px; }
+
+	a#comandos3 { top: 3360px; }
+
+	a#queHacer3 { top: 3420px; }
+}
+
+@media (max-width: 671px) {
+	a#reglamento2 { top: 5900px; }
+
+	a#mensajesPredefinidos2 { top: 5960px; }
+
+	a#comandos2 { top: 6020px; }
+}
+
+@media (max-width: 665px) {
+	a#reglamento2 { top: 6000px; }
+
+	a#mensajesPredefinidos2 { top: 6060px; }
+
+	a#comandos2 { top: 6120px; }
+}
+
+@media (max-width: 650px) {
+	a#reglamento3 { top: 3400px; }
+
+	a#comandos3 { top: 3460px; }
+
+	a#queHacer3 { top: 3520px; }
+}
+
+@media (max-width: 646px) {
+	a#reglamento2 { top: 6200px; }
+
+	a#mensajesPredefinidos2 { top: 6260px; }
+
+	a#comandos2 { top: 6320px; }
+}
+
+@media (max-width: 610px) {
+	a#reglamento3 { top: 3600px; }
+
+	a#comandos3 { top: 3660px; }
+
+	a#queHacer3 { top: 3720px; }
+}
+
+@media (max-width: 606px) {
+	a#reglamento2 { top: 6400px; }
+
+	a#mensajesPredefinidos2 { top: 6460px; }
+
+	a#comandos2 { top: 6520px; }
+}
+
+@media (max-width: 575px) {
+	a#reglamento { top: 1430px; }
+
+	a#mensajesPredefinidos { top: 1490px; }
+
+	a#queHacer2 { top: 1550px; }
+}
+
+@media (max-width: 568px) {
+	a#reglamento2 { top: 6600px; }
+
+	a#mensajesPredefinidos2 { top: 6660px; }
+
+	a#comandos2 { top: 6720px; }
+}
+
+@media (max-width: 560px) {
+	a#reglamento3 { top: 3900px; }
+
+	a#comandos3 { top: 3960px; }
+
+	a#queHacer3 { top: 4020px; }
+
+
+	a#reglamento2 { top: 6800px; }
+
+	a#mensajesPredefinidos2 { top: 6860px; }
+
+	a#comandos2 { top: 6920px; }
+}
+
+@media (max-width: 540px) {
+	a#reglamento2 { top: 7000px; }
+
+	a#mensajesPredefinidos2 { top: 7060px; }
+
+	a#comandos2 { top: 7120px; }
+}
+
+@media (max-width: 530px) {
+	a#reglamento { top: 1530px; }
+
+	a#mensajesPredefinidos { top: 1590px; }
+
+	a#queHacer2 { top: 1650px; }
+}
+
+@media (max-width: 514px) {
+	a#reglamento2 { top: 7200px; }
+
+	a#mensajesPredefinidos2 { top: 7260px; }
+
+	a#comandos2 { top: 7320px; }
+}
+
+@media (max-width: 513px) {
+	a#reglamento3 { top: 4000px; }
+
+	a#comandos3 { top: 4060px; }
+
+	a#queHacer3 { top: 4120px; }
 }
