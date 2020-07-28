@@ -188,23 +188,19 @@ a {
 	overflow-y: hidden;
 }
 
-.navbar__brand {
-	padding: 1em 0;
-	width: 150px;
-	height: 100%;
-	color: #fafafa;
-}
-
+.navbar__brand,
 .navbar__brand a {
 	color: #fafafa;
 }
 
+.navbar__brand {
+	padding: 2em 0;
+}
+
 .navbar__brand__img {
 	object-fit: cover;
-	width: 100%;
-	max-height: 150px;
-	/* line-height = .navbar height / 2 */
-	line-height: 40px;
+	height: 60px;
+	display: block;
 }
 
 .navbar__nav {
