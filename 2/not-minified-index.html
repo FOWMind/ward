@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es-LA">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta charset="utf-8"/>
+	<meta name="author" content="FOW Mind"/>
+	<title>Guía de Centinela</title>
+	<!--<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png"/>-->
+
+	<!-- Styles -->
+	<link href="assets/css/main.min.css" rel="stylesheet"/>
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body id="top">
+	<header>
+		<nav class="navbar flex">
+			<div class="navbar__brand">
+				<a href="#top">
+					<img class="navbar__brand__img" src="assets/img/logo.png" alt="Ward"/>
+				</a>
+			</div>
+
+			<ul class="navbar__nav">
+				<li><a href="#rules">Rules</a></li>
+				<li><a href="#commands">Commands</a></li>
+				<li><a href="#placeholders">Placeholders</a></li>
+				<!--<li><a href="#references">References</a></li>-->
+			</ul>
+		</nav>
+
+		<div class="cover">
+			<div class="cover__content">
+				<h1 class="title uppercase cover__title">Ward guide</h1>
+				<!--<form>
+					<input class="input" id="search" type="search" placeholder="Search something (ex.: ~warn)" autocomplete="off" />
+					<input type="submit" hidden/>
+				</form>-->
+			</div>
+		</div>
+	</header>
+
+
+
+	<main class="wrapper">
+		<section id="rules" class="section">
+			<h2 class="mini-title section__title">Rules</h2>
+			<span class="date section__date uppercase">Last update: 28 Jul. 2020</span>
+
+			<ul class="list section__list">
+				<span class="list__title uppercase">Forbidden</span>
+				<li>Insultar, provocar, publicar contenido para adultos, expresarse ofensivamente, tener un comportamiento indebido.</li>
+				<li>Mensajes con contenido vacío, repetitivo, realizando publicidad, spoilers de estrenos recientes (tampoco es válido con la opción de spoiler de Discord).</li>
+				<li>Nombres y fotos de perfil inapropiado que hagan referencia a:
+				Contenido sexual explícito, violencia simbólica, ficticia o real, enfermedades o cualquier afección usado de manera despectiva, expresiones de odio, personajes o sucesos históricos, políticos y sociales que puedan herir susceptibilidades, palabras altisonantes, agresivas u ofensivas, la palabra "Riot" en cualquier variante, suplantar la indentidad de otros miembros de la comunidad, spoilers sobre estrenos de películas, etc.</li>
+
+				<span class="list__title uppercase">Voice chat</span>
+				<li>Todos pueden hacer uso de ellas, estén jugando juntos o no.</li>
+				<li>Debes respetar a jugadores que estén en salas "Solo/Dúo" y "Premade".</li>
+				<li>Si entras a una sala de "Premade" para jugar, procura entrar a una que se ajuste a la cantidad de jugadores de tu equipo.</li>
+				<li>Entrar a un canal de voz queda bajo tu responsabilidad. Si alguna acción de otro usuario te molesta, puedes silenciar o bloquear a quien no desees escuchar; recuerda que puedes reportar situaciones muy severas como amenazas de muerte, intimidación, etc. a un moderador o centinela.</li>
+
+				<span class="list__title uppercase">General</span>
+				<li><strong class="uppercase">"Discord Riot Games LATAM"</strong> se rige por las Reglas Universales de Bienestar General de nuestros foros. Cualquier transgresión a estas reglas puede conllevar una sanción. Por favor, revisa las reglas antes de comenzar a interactuar con la comunidad.</li>
+			</ul>
+		</section>
+
+		<section id="commands" class="section">
+			<h2 class="mini-title section__title">Commands</h2>
+			<span class="date section__date uppercase">Last update: 28 Jul. 2020</span>
+
+			<ul class="list section__list">
+				<span class="list__title uppercase">Warnings</span>
+				<li>~warn @usuario razón | Envía una advertencia al usuario y la registra en la base de datos.</li>
+				<li>~warns @usuario | Lista de advertencias de un usuario.</li>
+				<li>~clw @usuario | Elimina todas las advertencias de un usuario.</li>
+				<li>~dw ID | Elimina una advertencia por el ID de la sanción (ver el comando ~warns).</li>
+				<li>~reason ID razón | Edita una razón por el ID de la sanción.</li>
+
+				<span id="mute-command" class="list__title uppercase">Mutes</span>
+				<li>~mute @usuario minutos razón | Silencia a un usuario de los canales de voz y de texto. Por defecto la duración es de 10 minutos.</li>
+				<li>~unmute @usuario razón | Remueve el silencio a un usuario.</li>
+
+				<span class="list__title uppercase">Kicks (only for moderators)</span>
+				<li>~kick @usuario razón | Expulsa a un usuario del servidor.</li>
+				<li>~ban @usuario razón -d minutos | Expulsa y bloquea a un usuario del servidor. Especificas la duración en días con el parámetro opcional -d</li>
+				<li>~banid ID razón -d minutos | Expulsa y bloquea a un usuario del servidor usando su ID de Discord. Especificas la duración en días con el parámetro opcional -d</li>
+
+				<span class="list__title uppercase">Delete / View messages</span>
+				<li>~cl 1-100 | Elimina la cantidad de mensajes especificados (se recomienda un máximo de 20 por vez).</li>
+				<li>~cl 1-100 -r piña | Elimina los mensajes usando una expresión regular, por ejemplo borrar todos lo que contengan la palabra piña (se recomienda un máximo de 20 por vez).</li>
+				<li>~logs 1-100 | Registro de los últimos mensajes en el canal donde es usado. La cantidad es el número de resultados que se quiere consultar. Se necesita iniciar sesión en <a class="link list__link" href="https://yagpdb.xyz/" target="_blank">https://yagpdb.xyz/</a> para leer el contenido.</li>
+
+				<span class="list__title uppercase">User's information</span>
+				<li>~nn @usuario | Muestra los últimos 25 apodos de un usuario.</li>
+				<li>~whois @usuario | Muestra información del usuario (Apodos, usernames, fecha de ingreso, etc).</li>
+				<li>/whois ID | Muestra información de la cuenta de un usuario (Nombre de invocador, nivel, etc).</li>
+
+				<span class="list__title uppercase">Reminders</span>
+				<li>~remindme 0d0h0m mensaje | Crea un recordatorio para cualquier evento importante.</li>
+				<li>~reminders | Lista los recordatorios activos.</li>
+				<li>/whois ID | Muestra información de la cuenta de un usuario (Nombre de Invocador, nivel, etc).</li>
+			</ul>
+		</section>
+
+		<section id="placeholders" class="section">
+			<h2 class="mini-title section__title">Placeholders</h2>
+			<span class="date section__date uppercase">Last update: 28 Jul. 2020</span>
+
+			<ul class="list section__list">
+				<span class="list__title uppercase">Expose users</span>
+				<li>No denuncies públicamente a otros usuarios dentro del servidor, este tipo de publicaciones pueden dañar el nombre de otros usuarios y se presta fácilmente para peleas.</li>
+				<li>Evita exponer a otros jugadores y recuerda darle un buen uso a los canales de texto. No respondas provocaciones ni provoques a otros jugadores.</li>
+				<li>Recuerda que está prohibido exponer a otros jugadores, si tienes algún reporte por favor hazlo al finalizar una partida.</li>
+
+				<span class="list__title uppercase">Sexual & forbidden comments</span>
+				<li>Evita realizar comentarios inapropiados y de índole sexual ("mensaje").</li>
+				<li>Evita realizar comentarios con connotación sexual ("mensaje").</li>
+
+				<span class="list__title uppercase">Neggative attitude o agression</span>
+				<li>Evita realizar comentarios provocativos y entrar en discusiones insultando a los demás usuarios. De continuar con esta actitud negativa, podrías recibir una sanción más severa.</li>
+				<li>Evita insultar a otros usuarios ("mensaje"), recuerda que debes mantener un ambiente de respeto.</li>
+				<li>Evita ser ofensivo con los demás ("mensaje"). De continuar con esta actitud podrías recibir una sanción más severa.</li>
+
+				<span class="list__title uppercase">Politic chats</span>
+				<li>Evita conversar sobre política o temas relacionados ("mensaje"), ya que pueden generar conflictos no deseados en el servidor.</li>
+				<li>Evita realizar comentarios que puedan tener referencias de personajes o sucesos históricos, políticos y sociales ("mensaje"), estos no se permiten en el servidor.</li>
+
+				<span class="list__title uppercase">Account trades</span>
+				<li>Evita crear o seguir conversaciones de política en el servidor ("mensaje"), estos temas están prohibidos ya que pueden generar problemas que no deseamos tener.</li>
+
+				<span class="list__title uppercase">Drugs</span>
+				<li>Evita realizar comentarios referentes a drogas o sustancias ilegales ("mensaje").</li>
+
+				<span class="list__title uppercase">Nickname change message</span>
+				<li>¡Hola! Tu nombre dentro del servidor ha sido cambiado debido a que es considerado inapropiado. No te preocupes, puedes volver a cambiarlo, pero asegúrate que esté dentro de los nombres permitidos por el reglamento.</li>
+
+				<span class="list__title uppercase">Request nick / profile change</span>
+				<li>¡Hola!
+				Silenciamos tu cuenta momentáneamente debido a que encontramos que el nombre/imagen que tienes en la comunidad es inapropiado, queremos pedir tu ayuda para cambiarlo a uno más adecuado, en cuanto se haga el cambio podemos quitar el silencio.
+				<br/>
+				Por favor evita cualquier referencia a:
+				• Pornografía o cualquier connotación sexual.
+				• Violencia explícita.
+				• Enfermedades o cualquier tipo de afección.
+				• Personajes históricos, políticos, sociales en controversia.
+				• Sucesos históricos que hieran la sensibilidad de otros.
+				• Groserías, palabras altisonantes, agresivas u ofensivas.
+				• Poseer Riot en cualquier variante (Rito, Rioter).
+				• Suplantar identidad de otros.
+				• Spoilers sobre estrenos de pelis, series, anime, etc.
+				Avísanos en cuanto hagas los cambios.
+				¡Gracias!</li>
+				<li>¡Hola! Silenciamos tu cuenta temporalmente porque hemos visto que el nombre/imagen que tienes en <strong class="uppercase">Comunidad Riot Games LATAM</strong> es inapropiado según lo puesto en el <#388782338001207296>. Por favor haz un cambio y avísanos para que quitemos el silencio.</li>
+
+				<span class="list__title uppercase">Off-topic media</span>
+				<li>Por favor respeta los tópicos de los canales. Evita subir contenido multimedia que no este relacionado a League of Legends en <#388784712304295966>.</li>
+				<li>Por favor, respeta el propósito de los canales. No subas contenido multimedia que no cumpla con los tópicos permitidos en el canal.</li>
+
+				<span class="list__title uppercase">Give or request elo-boost including price (use <a class="link list__link" href="#mute-command">mute</a> command)</span>
+				<li>Has sido silenciado temporalmente del servidor (1 día) por solicitar u ofrecer Elo-Boost porque va en contra de las reglas y los términos de uso de Riot Games.</li>
+
+				<span class="list__title uppercase">Depending of context, warn for elo-boost speechs</span>
+				<li>Evita realizar menciones sobre temas de Elo-Boost ya que va en contra de las reglas y los términos de uso de Riot Games; de continuar así podrías recibir una sanción más severa.</li>
+
+				<span class="list__title uppercase">After register user</span>
+				<li>¡Listo! ¡Bienvenid@ a <strong class="uppercase">Comunidad Riot Games LATAM</strong>! Te pido por favor que revises el <#388782338001207296> para aprender a convivir con las personas del servidor. Gracias.</li>
+
+				<span class="list__title uppercase">Why they can't upload media content</span>
+				<li>La multimedia en <#388784943419097089> y <#398533231948988416> se desbloquean al nivel 3 (lobo), mientras que en <#388784712304295966> al nivel 9 (rocoso). Vas subiendo nivel según envías mensajes, sólo te toma en cuenta 1 mensaje por minuto (para evitar el spam), puedes revisar en <#398559769339756544> poniendo !rank para ver el progreso y !roles para ver los roles disponibles por nivel.</li>
+			</ul>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<p class="footer__paragraph">Este sitio web no tiene relación alguna con "Riot Games", "League of Legends" o marcas y/o productos similares.
+		<br/>
+		El contenido presentado en este sitio web está hecho bajo el único propósito de ser guía de un determinado grupo de usuarios. Se prohíbe el uso de cualquier contenido (excepto de las imágenes de Riot Games y/o afiliados, que se rigen por sus términos y/o reglas) de este sitio sin el previo concentimiento de su autor.</p>
+		<p class="footer__paragraph">La(s) imagen/imágenes utilizada(s) en este sitio web es/son propiedad(es) de Riot Games y/o afiliados.
+		<br/>
+		&copy; Todos los derechos reservados.
+		</p>
+	</footer>
+</body>
+</html>
